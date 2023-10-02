@@ -2,19 +2,88 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition-duration: 300ms;
+}
+
+html {
+    font-family: "Noto serif display", sans-serif;
+}
+
+h1{
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 body {
     min-height: 100vh;
-    background: #351222;
+    background: #A1CDA8;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 24px; /*this spaces only the direct children aka header, main, footer */
+    padding: 24px;
 }
+
+header, main, footer {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 main {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
     flex: 1; /*tells to prioritise this*/ 
 }
+
+.plusIcon {
+    font-size: 1.5rem;
+}
+
+.plusIcon:hover {
+    color: #627264;
+    cursor: pointer;
+}
+
+#enterTodo input{
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    color: white;
+    flex: 1;
+    border: none;
+}
+#enterTodo form {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid #627264;
+}
+#enterTodo button {
+    background: #627264;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-family: "Noto serif display", sans-serif;
+    cursor: pointer;
+}
+#enterTodo button:hover {
+    background: transparent;
+    color: #627264;
+}
+
+#todos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+
+/*https://coolors.co/627264-a1cda8-b5dfca-c5e7e2-ad9baa*/
