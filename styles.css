@@ -63,18 +63,23 @@ main {
     display: flex;
     align-items: stretch;
     border: 2px solid #627264;
+    position: relative;
 }
 #enterTodo button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
     background: #627264;
     color: white;
     border: none;
     outline: none;
     padding: 0 10px;
-    font-family: "Noto serif display", sans-serif;
+    font-family: "Dela Gothic One", sans-serif;
     cursor: pointer;
 }
 #enterTodo button:hover {
-    background: transparent;
+    background: #A1CDA8;
     color: #627264;
 }
 
@@ -84,6 +89,32 @@ main {
     gap: 4px;
 }
 
+.todoItem {
+    display: flex;
+    align-items: center;
+}
+.todoItem p {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.actions i:hover {
+    color: rgb(218, 121, 86);
+    cursor: pointer;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+}
+footer i:hover {
+    cursor: pointer;
+    color: #627264;
+}
 
 
-/*https://coolors.co/627264-a1cda8-b5dfca-c5e7e2-ad9baa*/
