@@ -112,6 +112,7 @@ footer {
     display: grid;
     place-items: center;
 }
+
 footer i:hover {
     cursor: pointer;
     color: #627264;
