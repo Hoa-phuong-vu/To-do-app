@@ -51,6 +51,10 @@ main {
     cursor: pointer;
 }
 
+#enterTodo {
+    display: none;
+}
+
 #enterTodo input{
     background: transparent;
     outline: none;
@@ -65,6 +69,11 @@ main {
     border: 2px solid #627264;
     position: relative;
 }
+
+#enterTodo form:focus-within {
+    border-color: #C5E7E2;
+}
+
 #enterTodo button {
     position: absolute;
     right: 0;

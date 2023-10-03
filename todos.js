@@ -3,6 +3,15 @@ let todos = [];
 const todosList = document.getElementById("todos"); 
 const todoInput = document.getElementById("textInput");
 const inputButton = document.getElementById("button");
+const showAddTodo = document.getElementById("showAddTodo");
+const enterTodo = document.getElementById('enterTodo')
+
+//show add todo 
+function showTodoInput() {
+    enterTodo.style.display = "block"
+}
+
+showAddTodo.addEventListener("click", showTodoInput)
 
 //add todos
 function addTodo(e) {
@@ -12,6 +21,7 @@ function addTodo(e) {
     todosList.innerHTML = "" //resets the list so it doesn't print the same todos multiple times
     rendertodos()
     todoInput.value = ""
+    enterTodo.style.display = "none"
 }
 
 inputButton.addEventListener("click", addTodo)
@@ -31,6 +41,7 @@ function editTodos(index) {
     const spliceText = currElementText.slice(3)
     removeTodos(index)
     todoInput.value = spliceText
+    showTodoInput()
 }
 
 
