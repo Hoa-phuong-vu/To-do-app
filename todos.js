@@ -25,6 +25,14 @@ function removeTodos(index) {
     rendertodos()
 }
 
+//edit todos
+function editTodos(index) {
+    const currElementText = document.querySelector(`#todos div:nth-child(${index + 1}) p`).innerText
+    const spliceText = currElementText.slice(3)
+    removeTodos(index)
+    todoInput.value = spliceText
+}
+
 
 //labeling and displaying the todos
 function rendertodos() {
@@ -34,7 +42,7 @@ function rendertodos() {
             <div class="todoItem">
                 <p>${i + 1}. ${todo}</p>
                 <div class="actions">
-                    <i class="fa-solid fa-pen"></i>
+                    <i onclick="editTodos(${i})" class="fa-solid fa-pen"></i>
                     <i onclick="removeTodos(${i})" class="fa-solid fa-trash-can"></i>
                 </div>
             </div>
