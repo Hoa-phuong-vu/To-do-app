@@ -117,4 +117,7 @@ footer i:hover {
     color: #627264;
 }
 
+footer a {
+    color: inherit;
+}
 
